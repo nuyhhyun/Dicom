@@ -18,7 +18,8 @@ let package = Package(
             name: "DicomMetaKit"),
         .testTarget(
             name: "DicomMetaKitTests",
-            dependencies: ["DicomMetaKit"]
+            dependencies: ["DicomMetaKit"],
+            resources: [.process("Resources")]
         ),
     ]
 )
