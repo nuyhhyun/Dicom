@@ -3,7 +3,7 @@
 A lightweight Swift package for reading **DICOM metadata** (tags, headers, attributes) without handling pixel data.  
 Designed for educational, research, and utility purposes when only metadata inspection is required.
 
-[Korean Explanation](#DicomMetaKit (Korean))
+[(#DicomMetaKit (Korean))](https://github.com/bome24/DicomMetaKit?tab=readme-ov-file#dicommetakit-korean)
 
 ---
 
