@@ -12,6 +12,7 @@ struct ContentView: View {
         VStack {
             Text("DICOM")
                 .font(.logo)
+                .foregroundStyle(.accent)
         }
         .padding()
     }
