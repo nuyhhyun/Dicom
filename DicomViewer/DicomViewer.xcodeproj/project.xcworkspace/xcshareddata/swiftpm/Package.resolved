@@ -1,0 +1,15 @@
+{
+  "originHash" : "1dbd4cd4375155dc1e072c5b77cd3e3c81fffe0da64be06b0638c06df10102e4",
+  "pins" : [
+    {
+      "identity" : "dicom",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nuyhhyun/Dicom",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e2b10cbe24f8a60fe17b06a2cbb725890c8b82f7"
+      }
+    }
+  ],
+  "version" : 3
+}
