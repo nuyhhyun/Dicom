@@ -22,6 +22,7 @@ struct LoadingView: View {
                     .frame(width: 60, height: 60)
                 
                 Text("샘플 파일을 분석 중입니다.")
+                    .font(.small)
             }
             .transition(.opacity)
             .onAppear {

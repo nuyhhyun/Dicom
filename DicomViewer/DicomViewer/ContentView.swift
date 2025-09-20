@@ -14,14 +14,14 @@ struct ContentView: View {
         NavigationStack(path: $path) {
             VStack(spacing: 50) {
                 Text("DICOM")
-                    .font(.logo)
+                    .font(.large)
                     .foregroundStyle(.accent)
                 if #available(iOS 26.0, *) {
                     Button(action: {
                         path.append("LoadingView")
                     }) {
                         Text("파일 분석")
-                            .font(.text)
+                            .font(.small)
                             .foregroundStyle(.accent)
                             .padding(20)
                             .glassEffect()
@@ -31,7 +31,7 @@ struct ContentView: View {
                         path.append("LoadingView")
                     }) {
                         Text("파일 분석")
-                            .font(.text)
+                            .font(.small)
                             .foregroundStyle(.accent)
                             .padding(16)
                             .overlay(
