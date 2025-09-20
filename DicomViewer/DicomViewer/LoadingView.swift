@@ -30,9 +30,7 @@ struct LoadingView: View {
                     isAnalyzed = true
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color("Background"))
-            .ignoresSafeArea()
+            .fullBackground(Color("Background"))
         }
     }
 }

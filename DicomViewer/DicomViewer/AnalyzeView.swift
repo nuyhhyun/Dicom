@@ -9,31 +9,30 @@ import SwiftUI
 
 struct AnalyzeView: View {
     var body: some View {
-        VStack(spacing: 48) {
+        VStack(spacing: 20) {
             // TODO: 샘플 파일 이름으로 변경
             Text("""
-                 X-Ray
-                 Angiographic
-                 Image Storage
+                Ultrasound
+                Multi-frame
+                Image Storage
                 """)
             .font(.bold)
             .foregroundStyle(.accent)
             .multilineTextAlignment(.center)
-            .padding(.top, 88)
+            .padding(.top, 100)
             
             // TODO: 샘플 파일 이미지로 변경
             Image("dicomImage")
                 .resizable()
                 .scaledToFit()
+                .frame(height: 280)
                 .padding(.horizontal, 40)
             
             InfoSegmentationView()
             
             Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("Background"))
-        .ignoresSafeArea()
+        .fullBackground(Color("Background"))
     }
 }
 
