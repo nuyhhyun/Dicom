@@ -8,13 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        VStack {
-            Text("DICOM")
-                .font(.logo)
-                .foregroundStyle(.accent)
+        NavigationStack(path: $path) {
+            VStack(spacing: 50) {
+                Text("DICOM")
+                    .font(.logo)
+                    .foregroundStyle(.accent)
+                if #available(iOS 26.0, *) {
+                    Button(action: {
+                        path.append("LoadingView")
+                    }) {
+                        Text("파일 분석")
+                            .font(.text)
+                            .foregroundStyle(.accent)
+                            .padding(20)
+                            .glassEffect()
+                    }
+                } else {
+                    Button(action: {
+                        path.append("LoadingView")
+                    }) {
+                        Text("파일 분석")
+                            .font(.text)
+                            .foregroundStyle(.accent)
+                            .padding(16)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(.accent, lineWidth: 2)
+                            )
+                    }
+                }
+            }
+            .navigationDestination(for: String.self) { value in
+                if value == "LoadingView" {
+                    LoadingView()
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("Background"))
+            .ignoresSafeArea()
         }
-        .padding()
     }
 }
 
