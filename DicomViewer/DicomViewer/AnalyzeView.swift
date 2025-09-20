@@ -9,16 +9,17 @@ import SwiftUI
 
 struct AnalyzeView: View {
     var body: some View {
-        VStack(spacing: 37) {
+        VStack(spacing: 48) {
             // TODO: 샘플 파일 이름으로 변경
             Text("""
                  X-Ray
                  Angiographic
                  Image Storage
                 """)
-            .font(.medium)
+            .font(.bold)
             .foregroundStyle(.accent)
             .multilineTextAlignment(.center)
+            .padding(.top, 88)
             
             // TODO: 샘플 파일 이미지로 변경
             Image("dicomImage")
@@ -26,7 +27,9 @@ struct AnalyzeView: View {
                 .scaledToFit()
                 .padding(.horizontal, 40)
             
-            DetailInfoView()
+            InfoSegmentationView()
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("Background"))
